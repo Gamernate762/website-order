@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="favicon.ico">
+
+<title>Nathan's Custom Website Design Services</title>
+<head>
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+  background:#0d0d0d;
+  color:white;
+  overflow-x:hidden;
+}
+
+:root{
+  --orange:#ff9e00;
+}
+
+/* NAVBAR */
+
+nav{
+  width:100%;
+  padding:20px 8%;
+  background:black;
+  border-bottom:2px solid var(--orange);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:999;
+}
+
+.logo{
+  color:var(--orange);
+  font-size:1.8rem;
+  font-weight:bold;
+}
+
+nav ul{
+  display:flex;
+  gap:25px;
+  list-style:none;
+  flex-wrap:wrap;
+}
+
+nav a{
+  text-decoration:none;
+  color:white;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:var(--orange);
+}
+
+/* HERO */
+
+.hero{
+  min-height:90vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:80px 10%;
+  background:
+  linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)),
+  radial-gradient(circle at top left, rgba(255,122,0,0.25), transparent 30%),
+  radial-gradient(circle at bottom right, rgba(255,122,0,0.15), transparent 30%);
+}
+
+.hero-content{
+  max-width:900px;
+}
+
+.hero h1{
+  font-size:4rem;
+  color:var(--orange);
+  margin-bottom:25px;
+}
+
+.hero p{
+  font-size:1.2rem;
+  color:#ddd;
+  line-height:1.9;
+  margin-bottom:35px;
+}
+
+.hero-buttons{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  padding:14px 28px;
+  border-radius:35px;
+  text-decoration:none;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.btn-primary{
+  background:var(--orange);
+  color:black;
+}
+
+.btn-primary:hover{
+  transform:translateY(-3px);
+  background:#ff9d42;
+}
+
+.btn-secondary{
+  border:2px solid var(--orange);
+  color:white;
+}
+
+.btn-secondary:hover{
+  background:var(--orange);
+  color:black;
+}
+
+/* SECTIONS */
+
+section{
+  padding:90px 8%;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:50px;
+}
+
+.section-title h2{
+  font-size:2.8rem;
+  color:var(--orange);
+  margin-bottom:15px;
+}
+
+.section-title p{
+  max-width:700px;
+  margin:auto;
+  line-height:1.8;
+  color:#bbb;
+}
+
+/* SERVICES */
+
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+.service-card{
+  background:#171717;
+  border-radius:20px;
+  padding:35px;
+  border:1px solid rgba(255,122,0,0.2);
+  transition:0.3s;
+}
+
+.service-card:hover{
+  transform:translateY(-8px);
+  border-color:var(--orange);
+  box-shadow:0 0 25px rgba(255,122,0,0.2);
+}
+
+.service-card h3{
+  color:var(--orange);
+  margin-bottom:15px;
+  font-size:1.6rem;
+}
+
+.service-card p{
+  color:#ddd;
+  line-height:1.8;
+}
+
+/* SHOWCASE */
+
+.showcase{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:25px;
+}
+
+.showcase-box{
+  background:#171717;
+  border-radius:20px;
+  overflow:hidden;
+  border:1px solid rgba(255,122,0,0.2);
+  transition:0.3s;
+}
+
+.showcase-box:hover{
+  transform:translateY(-6px);
+  box-shadow:0 0 20px rgba(255,122,0,0.25);
+  object-fit:contain;
+}
+
+.placeholder{
+  object-fit:contain;
+  height:250px;
+  background:
+  linear-gradient(135deg,#1d1d1d,#111);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:20px;
+  color:#bbb;
+  font-size:1.1rem;
+  border-bottom:1px solid rgba(255,122,0,0.2);
+}
+img {
+      max-width: 100%; 
+      height: auto; 
+      object-fit:contain;
+      display: block;
+          }
+
+.showcase-text{
+  padding:20px;
+}
+
+.showcase-text h4{
+  color:var(--orange);
+  margin-bottom:10px;
+  font-size:1.4rem;
+}
+
+.showcase-text p{
+  color:#ddd;
+  line-height:1.7;
+}
+
+/* PROCESS */
+
+.process{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
+.step{
+  background:#171717;
+  padding:30px;
+  border-left:5px solid var(--orange);
+  border-radius:15px;
+}
+
+.step h4{
+  color:var(--orange);
+  margin-bottom:12px;
+  font-size:1.3rem;
+}
+
+.step p{
+  color:#ddd;
+  line-height:1.8;
+}
+
+/* CONTACT */
+
+.contact-box{
+  max-width:800px;
+  margin:auto;
+  background:#171717;
+  border-radius:25px;
+  padding:50px;
+  border:1px solid rgba(255,122,0,0.2);
+  text-align:center;
+}
+
+.contact-box h2{
+  color:var(--orange);
+  margin-bottom:20px;
+  font-size:2.5rem;
+}
+
+.contact-box p{
+  color:#ddd;
+  line-height:1.9;
+  margin-bottom:30px;
+}
+
+.contact-buttons{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.contact-btn{
+  padding:14px 28px;
+  background:var(--orange);
+  color:black;
+  text-decoration:none;
+  border-radius:35px;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.contact-btn:hover{
+  transform:scale(1.05);
+}
+
+/* FOOTER */
+
+footer{
+  padding:30px;
+  text-align:center;
+  border-top:2px solid var(--orange);
+  background:black;
+  color:#999;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  nav{
+    flex-direction:column;
+    gap:15px;
+  }
+
+  .hero h1{
+    font-size:2.8rem;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+  <div class="logo">
+    💻 ★ Nathan's Custom Website Design ★
+  </div>
+
+  <ul>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#showcase">Examples</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <h1>✧ Custom Websites Made For You ✧</h1>
+
+    <p>
+      Need a website for your art, crafts, business,
+      commissions, gaming profile, or shop?
+      I create custom websites with unique themes,
+      galleries, animations, and pages designed
+      around your style.
+    </p>
+
+    <div class="hero-buttons">
+
+      <a href="#contact" class="btn btn-primary">
+        ★ Request A Website ★
+      </a>
+
+      <a href="#showcase" class="btn btn-secondary">
+        ★ View Examples ★
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section id="services">
+
+  <div class="section-title">
+
+    <h2>✨ Website Services</h2>
+
+    <p>
+      Custom designed websites made to match your personality,
+      style, and content.
+    </p>
+
+  </div>
+
+  <div class="services">
+
+    <div class="service-card">
+
+      <h3>🛍️ Shop Websites</h3>
+
+      <p>
+        Online storefronts for artists, crafters,
+        commissions, or small businesses with galleries,
+        pricing sections, and contact pages.
+      </p>
+
+    </div>
+
+    <div class="service-card">
+
+      <h3>🎨 Portfolio Websites</h3>
+
+      <p>
+        Show off your artwork, creations, projects,
+        photography, or collections in a stylish gallery layout.
+      </p>
+
+    </div>
+
+    <div class="service-card">
+
+      <h3>✨ Custom Themes</h3>
+
+      <p>
+        Black & orange? Pastel? Gothic? Cute?
+        Your website can be designed around your exact aesthetic.
+      </p>
+
+    </div>
+
+    <div class="service-card">
+
+      <h3>📱 Mobile Friendly</h3>
+
+      <p>
+        Websites are designed to work on phones,
+        tablets, and computers.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- SHOWCASE -->
+
+<section id="showcase">
+
+  <div class="section-title">
+
+    <h2>🖼️ Example Layouts</h2>
+
+    <p>
+      These are a few websites I have made that you can gain ideas from.
+    </p>
+
+  </div>
+
+  <div class="showcase">
+
+    <div class="showcase-box">
+      <img src="https://codehs.com/uploads/54fc56fe6660acda3e42a44fcc2d2dc6" alt="Full ">
+
+      <div class="showcase-text">
+
+        <h4>Shops</h4>
+
+        <p>
+          A themed storefront with galleries,
+          custom pricing, effects,
+          and contact pages. This one is mine that I use to show information on charms I sell.
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="showcase-box">
+    <img src="https://codehs.com/uploads/81f5188c2003711125182ca93a5772b5" alt="Full ">
+
+      <div class="showcase-text">
+
+        <h4>Artist Portfolio</h4>
+
+        <p>
+          Showcase artwork, projects,
+          and commissions with stylish layouts. This one shows my charms and processes 
+          I used, linked to the shop website above.
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="showcase-box">
+    <img src="https://codehs.com/uploads/95734c8a85237a08bb9413c88e4cb292" alt="Full ">
+
+      <div class="showcase-text">
+
+        <h4>Personal About Websites</h4>
+
+        <p>
+          Order an About Me website uniquely yours! this one 
+          as an example, is one made for myself, that you can visit by clicking 
+          "About the Maker" in contacts! (Words not shown in image due to how often it may change).
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- PROCESS -->
+
+<section id="process">
+
+  <div class="section-title">
+
+    <h2>⚙️ How It Works</h2>
+
+    <p>
+      Simple process from idea to finished website.
+    </p>
+
+  </div>
+
+  <div class="process">
+
+    <div class="step">
+
+      <h4>1️⃣ Share Your Idea</h4>
+
+      <p>
+        Tell me your theme, colors,
+        pages, and what type of website you want. You can even 
+        add special features!
+      </p>
+
+    </div>
+
+    <div class="step">
+
+      <h4>2️⃣ Send Photos & Info</h4>
+
+      <p>
+        Send artwork, products, text,
+        pricing, or social links to add if you want.
+      </p>
+
+    </div>
+
+    <div class="step">
+
+      <h4>3️⃣ Website Creation</h4>
+
+      <p>
+        Your website is designed with
+        custom styling and layouts by me, with a strong attempt to match what you want.
+      </p>
+
+    </div>
+
+    <div class="step">
+
+      <h4>4️⃣ Finished Website</h4>
+
+      <p>
+        Receive your completed website as a html file,
+        ready to edit or publish. I will attempts to guide you if you want. 
+        YOU ARE ONLY PAYING FOR THE FILE, NOT PUBLISHING AS A DOMAIN!
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+  <div class="contact-box">
+
+    <h2>📩 Request A Website</h2>
+
+    <p>
+      Interested in your own custom website?
+      Contact me with your ideas,
+      preferred colors, pages, and style. Prices begin 
+      at 15$ and add up per change or complexity (Patents and legal additions not included). Custom 
+      domains (such as example.com) instead of a default
+      codehs site or github page WILL COST $120+.
+    </p>
+
+    <div class="contact-buttons">
+      <a href="tel:+19096884924" target="_blank" class="contact-btn">
+        ★ Text Me ★
+      </a>
+
+      <a href="mailto:alvareznathan079@gmail.com" class="contact-btn">
+        ★ Email Me ★
+      </a>
+      
+      <a href="https://gamernate762.github.io" target="_blank" class="contact-btn">
+        ★-About the Maker-★
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+  &copy; 2026 ✧ Nathan's Custom Website Design ✧ • Built With spare time and a LOT of requests.
+</footer>
+
+<script>
+
+document.querySelectorAll('nav a').forEach(anchor => {
+
+  anchor.addEventListener('click', function(e){
+
+    e.preventDefault();
+
+    const target = document.querySelector(
+      this.getAttribute('href')
+    );
+
+    if(target){
+
+      target.scrollIntoView({
+        behavior:'smooth'
+      });
+
+    }
+
+  });
+
+});
+
+</script>
+
+</body>
+</html>
